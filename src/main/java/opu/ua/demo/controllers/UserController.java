@@ -20,14 +20,13 @@ public class UserController {
         this.service = service;
     }
 
-
     @GetMapping
     public List<User> getAllUsers(){
         return service.getAllUsers();
     }
 
     @GetMapping("/{id}")
-    public User getAllUsers(@PathVariable long id){
+    public Optional<User> getAllUsers(@PathVariable long id){
         return service.getUser(id);
     }
 

@@ -24,6 +24,8 @@ public class User {
     private int dailyGoal;
     private float weight;
     private float height;
+    private String roles;
+    private boolean isActive;
 
     //add one more entity from the photo
 

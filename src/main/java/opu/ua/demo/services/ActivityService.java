@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ActivityService {
@@ -25,7 +26,7 @@ public class ActivityService {
      //   return repository.findAllByUserId(userId);
     //}
 
-    public Activity getActivity(long userId){
+    public Optional<Activity> getActivity(long userId){
         return repository.findActivityByUserId(userId);
     }
 

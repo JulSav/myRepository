@@ -15,5 +15,7 @@ spring:
     password: a4ae7a613f6156af81d4bab8ded892219a9841d0b27b7d26eebfb414b45d3f44
     driver-class-name: org.postgresql.Driver
 
+
+
 server:
-  port: 8076
+  port: 8078

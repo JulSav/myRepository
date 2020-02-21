@@ -6,11 +6,12 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 @Repository
 public interface ActivityRepository extends JpaRepository<Activity, Long> {
      //List<Activity> findAllByUserId(long userId);
-     Activity findActivityByUserId(long userId);
+     Optional<Activity> findActivityByUserId(long userId);
 
      //void removeActivityByUserId(long userId);
      @Transactional

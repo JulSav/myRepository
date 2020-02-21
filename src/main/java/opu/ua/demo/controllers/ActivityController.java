@@ -5,7 +5,7 @@ import opu.ua.demo.services.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/user")
@@ -25,7 +25,7 @@ public class ActivityController {
     //}
 
     @GetMapping("/{userId}/activity")
-    public Activity getAllActivity(@PathVariable long userId){
+    public Optional<Activity> getAllActivity(@PathVariable long userId){
        return service.getActivity(userId);
     }
 
